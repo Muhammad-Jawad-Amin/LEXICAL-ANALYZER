@@ -1,0 +1,19 @@
+#include<iostream>
+#include "Tokens.h"
+
+using namespace std;
+
+extern int yylex();
+extern char* yytext;
+
+int main()
+{
+	int Value = 78.678e+65;
+	int X = Y * Z;
+	int Token = yylex();
+	while(Token != 0)
+	{
+		cout<< Token << " , " << yytext << " \n";
+		Token = yylex();
+	}
+}
